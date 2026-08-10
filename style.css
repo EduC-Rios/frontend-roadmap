@@ -32,14 +32,7 @@ ul {
     list-style-position: inside;
 }
 
-.lista {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-}
-
-.objetivos-lista {
+.objetivos-lista, .lista {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -81,9 +74,5 @@ section {
 * {
     box-sizing: border-box;
 }
-
-   /* * {
-        border: 1px solid yellow;
-    } */
 
 
