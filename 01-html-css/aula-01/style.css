@@ -75,4 +75,28 @@ section {
     box-sizing: border-box;
 }
 
+@media (max-width: 600px) {
+    .objetivos-lista, .lista {
+        flex-direction: column;
+        gap: 50%;
+    }
+
+    .tecnologias-card {
+        flex-direction: column;
+        gap: 60%;
+    }
+
+    .titulo {
+        font-size: 90%;
+    }
+
+    .subtitulo {
+        font-size: 70%;
+    }
+
+    p {
+        font-size: 70%;
+    }
+}
+
 
