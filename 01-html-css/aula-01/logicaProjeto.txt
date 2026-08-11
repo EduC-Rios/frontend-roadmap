@@ -1,0 +1,61 @@
+Problema: Criar uma página que tenha uma lista de tarefas, onde o usuário precisa conseguir adicionar uma tarefa nova e depois
+marcar como concluída
+
+passo 1: Criar em HTML uma estrutura básica com todos os elementos necessários pra gerar uma estrutura simples
+tipo ter um espaço pra onde as tarefas aparecerão, botões de adicionar, excluir, ou concluir tarefas.
+
+passo 2: estilizar minimamente a pagina em CSS para que seja mais fluida e bonita.
+
+passo 3: realizar a configuração da lógica funcional da página na qual adiciona novas tarefas ao apertar o botão "nova tarefa" e permita
+o usuário digitar o NOME da tarefa, o PRAZO, e o nível de URGENCIA
+
+Tarefas: Na tarefa temos "nome", "descrição", "prazo", "nível urgencia", "concluida: sim/não"
+
+usuário clica em adicionar tarefa, uma tela aparece com os campos a serem preenchidos, com os valores solicitados acima, tirando a parte
+onde o usuário define se está concluida ou não.
+
+usuário preenche todos os campos e clica em finalizar, nisso o sistema deve pegar esses dados e apresentar eles em uma lista de tarefas em andamento
+
+nessa mesma lista o usuario tem o poder de selecionar se a mesma foi concluida ou não, nisso a tarefa ficará marcada em outra lista "tarefas concluidas"
+
+se o usuário quiser excluir a tarefa, poderá apertar no botão editar tarefa, e remover, assim a tarefa sairia da lista de tarefas em andamento
+
+se o usuário criar uma tarefa sem nome, o sistema apresentará o erro de que um nome deve ser atribuido, isso só aconteceria para o nome e prazo da tarefa
+
+imaginemos o seguinte: o usuário tem 3 tarefas "estudar HTML" "estudar CSS" e "estudar JS", e nisso o usuário precisa realizar três ações:
+primeira ação > editar a tarefa "estudar CSS" para concluida
+segunda ação > mudar o tipo de urgência da tarefa "estudar JS"
+terceira ação> excluir a tarefa "estudar HTML"
+como ele faria?
+
+Primeiramente ele clicaria no botão editar tarefa na lista de tarefas em andamento, na tarefa "estudar CSS"
+Depois ele localizaria o marcador "Concluida", deixaria o marcador selecionado, e salvaria a alteração
+Nisso o sistema criará uma nova lista ao lado com o título "tarefas concluidas" e adicionaria as informações da tarefa "estudar CSS" lá
+com isso concluímos a primeira ação
+
+Segunda ação: usuário clica em editar tarefa, na tarefa "estudar JS", muda o seletor de urgência para "Alta" e salva a alteração
+Nisso o sistema irá mudar o valor da urgência e apresentará na lista de tarefas em andamento o novo valor do campo urgência.
+Com isso concluimos a segunda ação
+
+Terceira ação: usuário clica em editar tarefa na tarefa "estudar HTML", localiza o botão "Excluir", clica nele, o sistema apresentará
+uma mensagem de confirmação onde tem os botões "excluir" e "cancelar", usuário seleciona "excluir" e a tarefa simplesmente sai da lista
+"tarefas em andamento"
+
+Cada tarefa terá um indicador ao ser criada, começando pelo valor "0", no qual há sempre um incremento no momento de uma adição de nova tarefa
+juntamente de todos os dados de cada tarefa também, por exemplo:
+
+Tarefa 0
+id_tarefa: 0
+nome_tarefa: "X"
+descricao: "X"
+prazo: "X"
+concluida: nao
+
+e depois
+
+Tarefa 1
+id_tarefa: 1
+nome_tarefa: "X"
+descricao: "X"
+prazo: "X"
+concluida: nao

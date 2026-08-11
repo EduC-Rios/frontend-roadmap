@@ -78,24 +78,16 @@ section {
 @media (max-width: 600px) {
     .objetivos-lista, .lista {
         flex-direction: column;
-        gap: 50%;
+        gap: 10px;
     }
 
     .tecnologias-card {
         flex-direction: column;
-        gap: 60%;
+        gap: 10px;
     }
 
     .titulo {
-        font-size: 90%;
-    }
-
-    .subtitulo {
-        font-size: 70%;
-    }
-
-    p {
-        font-size: 70%;
+        font-size: 20px;
     }
 }
 
