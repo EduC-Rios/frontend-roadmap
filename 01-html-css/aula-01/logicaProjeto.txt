@@ -58,4 +58,58 @@ id_tarefa: 1
 nome_tarefa: "X"
 descricao: "X"
 prazo: "X"
+urgencia: "X"
 concluida: nao
+
+o sistema guardará essas informações em um txt de consulta onde ele salva e verifica os valores das tarefas
+
+as tarefas aparecerão na tela a partir das listas já existentes, serão duas, "tarefas pendentes" e "tarefas concluidas"
+
+não serão automaticamente criadas novas tarefas assim que alguma for concluída, isso ficará de decisão do usuário
+
+eu diria que o txt ficará salvo dentro do diretório do projeto com todas as informações gravadas, e poderão ser acessadas
+novamente em outro momento, diria também que para não ter conflito com o id_tarefa, o sistema irá ler a quantidade de
+ids existente, e assim irá encontrar o maior id gerado, gerando um incremento a partir do valor do maior id_tarefa
+
+Como inicia o sistema?
+
+Usuário entra na página de tarefas
+
+sistema lê a base de dados que é o nosso .txt, SE tiver algo registrado, sistema apresenta as tarefas do usuário conforme já haviam
+sido registradas, SE NÂO, sistema cria um txt para usar de base de dados
+
+Se sistema encontrar .txt
+    apresentar lista de tarefas salvas dentro do .txt ao usuário
+    aguardar ação usuário
+Se não
+    criar txt em branco
+    aguardar ação Usuário
+
+Se usuario criar nova tarefa
+    registrar nova tarefa em .txt
+Se não
+    aguardar ação do usuário 
+
+Se usuário excluir tarefa
+    sistema localiza o id_tarefa no txt, e exclui as informações
+    sistema atualiza a interface com a nova informação de que uma tarefa de id X foi excluida
+Se não
+    sistema aguarda ação
+
+Se usuário concluir tarefa
+    sistema aloca tarefa na lista de tarefas concluídas
+    sistema bloqueia qualquer edição em tarefas concluídas
+Se não
+    sistema aguarda ação
+
+Se usuário tentar editar uma tarefa
+    sistema verifica se a mesma está concluída ou não
+        Se não concluída
+            permitir edição
+        Se estiver concluída
+            bloquear edição
+
+Sistema bloqueia totalmente edição de tarefas concluídas para que elas sempre fiquem a mostra na lista de tarefas já finalizadas
+
+é possível que o usuário exclua tarefas concluídas caso o mesmo queira remover o registro da lista de concluidas
+
